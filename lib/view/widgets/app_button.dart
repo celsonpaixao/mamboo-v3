@@ -8,7 +8,6 @@ enum TypeButton {
   translucent,
 }
 
-
 Color getButtonStyle(TypeButton type) {
   switch (type) {
     case TypeButton.primary:
@@ -52,8 +51,8 @@ class AppButton extends StatelessWidget {
         color: getButtonStyle(type),
         shape: ContinuousRectangleBorder(
             side: BorderSide(
-              color: isborder != null ? Colors.white : Colors.transparent, width: 2
-            ),
+                color: isborder != null ? Colors.white : Colors.transparent,
+                width: 2),
             borderRadius: BorderRadius.circular(18)),
         child: Wrap(
           alignment: WrapAlignment.center,
@@ -64,6 +63,7 @@ class AppButton extends StatelessWidget {
               Icon(
                 icon,
                 color: Colors.white,
+                size: 20,
               ),
             ],
           ],

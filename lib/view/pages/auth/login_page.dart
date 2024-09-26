@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:mamaboo_v3/app/app_module.dart';
 import 'package:mamaboo_v3/resources/app_colors.dart';
+import 'package:mamaboo_v3/resources/app_routers.dart';
 import 'package:mamaboo_v3/view/widgets/app_button.dart';
 import 'package:mamaboo_v3/view/widgets/app_image_button.dart';
 import 'package:mamaboo_v3/view/widgets/app_input.dart';
@@ -97,18 +99,21 @@ class _LoginPageState extends State<LoginPage> {
         const AppVerticalSpacing(
           values: 20,
         ),
-        const Row(
+        Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            AppText(text: "Não tem uma conta?"),
-            AppHorizontalSpacing(
+            const AppText(text: "Não tem uma conta?"),
+            const AppHorizontalSpacing(
               values: 5,
             ),
-            AppText(
-              text: "Registar",
-              style: AppTextStyle.p_bold,
-            ),
+            GestureDetector(
+              onTap: () => modularSimpleNavigation(router: registerPage),
+              child: const AppText(
+                text: "Registar",
+                style: AppTextStyle.p_bold,
+              ),
+            )
           ],
         ),
       ],

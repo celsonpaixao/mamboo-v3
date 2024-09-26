@@ -1,11 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_modular/flutter_modular.dart';
-import 'package:mamaboo_v3/resources/app_colors.dart';
-import 'package:mamaboo_v3/resources/app_routers.dart';
-import 'package:mamaboo_v3/view/widgets/app_button.dart';
-import 'package:mamaboo_v3/view/widgets/app_spacing.dart';
 import 'package:mamaboo_v3/view/widgets/app_text.dart';
 import 'package:mamaboo_v3/view/widgets/page_layout.dart';
 

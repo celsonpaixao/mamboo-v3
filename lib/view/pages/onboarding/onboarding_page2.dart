@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_modular/flutter_modular.dart';
+import 'package:mamaboo_v3/app/app_module.dart';
 import 'package:mamaboo_v3/resources/app_colors.dart';
 import 'package:mamaboo_v3/resources/app_routers.dart';
 import 'package:mamaboo_v3/view/pages/onboarding/onboarding_card.dart';
 import 'package:mamaboo_v3/view/widgets/app_button.dart';
 import 'package:mamaboo_v3/view/widgets/app_spacing.dart';
-import 'package:mamaboo_v3/view/widgets/page_layout.dart';
 
 class OnboardingPage2 extends StatelessWidget {
   const OnboardingPage2({super.key});
@@ -25,17 +24,13 @@ class OnboardingPage2 extends StatelessWidget {
               text: "Seguinte",
               icon: Icons.arrow_forward_sharp,
               type: TypeButton.secondary,
-              onPressed: () {
-                Modular.to.pushNamed(onboarding3);
-              },
+              onPressed: () => modularSimpleNavigation(router: onboarding3),
             ),
-             const AppVerticalSpacing(),
+            const AppVerticalSpacing(),
             AppButton(
               text: "Pular",
               type: TypeButton.translucent,
-              onPressed: () {
-                Modular.to.pushNamed(onboarding5);
-              },
+              onPressed: () => modularSimpleNavigation(router: onboarding5),
             )
           ],
         ),

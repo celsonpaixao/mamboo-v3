@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mamaboo_v3/resources/app_colors.dart';
+import 'package:mamaboo_v3/styles/app_stytles.dart';
 import 'package:mamaboo_v3/view/widgets/app_text.dart';
 import 'package:mamaboo_v3/view/widgets/app_spacing.dart';
 
@@ -12,8 +13,9 @@ class AppInput extends StatelessWidget {
   final bool obscureText;
   final TextEditingController? controller;
   final FormFieldValidator<String>? validator;
-  final TextInputAction? textInputAction;
   final ValueChanged<String>? onChanged;
+  final TextInputAction? textInputAction;
+
   final int? maxLines;
   final int? maxLength;
 
@@ -35,14 +37,6 @@ class AppInput extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final borderTyle = OutlineInputBorder(
-      borderRadius: BorderRadius.circular(5),
-      borderSide: const BorderSide(color: Colors.white, width: 1),
-    );
-    final errorBorderTyle = OutlineInputBorder(
-      borderRadius: BorderRadius.circular(5),
-      borderSide: const BorderSide(color: secondary500, width: 1),
-    );
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
